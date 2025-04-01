@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, Image, TouchableOpacity, StyleSheet } from "react-native";
 import * as LocalAuthentication from "expo-local-authentication";
-import MaterialCommunityIcons from "@expo/vector-icons/MaterialCommunityIcons";
 import ScreenWrapper from "@/components/ScreenWrapper";
 import { styles } from "./styles";
 import AnimatedSplashScreen from "../components/SplashScreen";
+import { useRouter } from "expo-router";
 const FaceIDLogin = () => {
   const [appIsReady, setAppIsReady] = useState(false);
+  const navigate = useRouter();
   const handleFaceID = async () => {
     const hasHardware = await LocalAuthentication.hasHardwareAsync();
     const isEnrolled = await LocalAuthentication.isEnrolledAsync();
@@ -35,9 +36,12 @@ const FaceIDLogin = () => {
     prepareApp();
   }, []);
 
-    if (!appIsReady) {
-      return <AnimatedSplashScreen />;
-    }
+  if (!appIsReady) {
+    return <AnimatedSplashScreen />;
+  }
+  const navigateToLogin = () => {
+    navigate.push("/login");
+  };
   return (
     <ScreenWrapper>
       <View style={styles.container}>
@@ -64,9 +68,13 @@ const FaceIDLogin = () => {
           <Text style={styles.verifyText}>Verify Face</Text>
         </TouchableOpacity>
         <View style={styles.footer}>
-          <Text style={styles.switchText}>Switch Account</Text>
+          <Text style={styles.switchText} onPress={navigateToLogin}>
+            Switch Account
+          </Text>
           <Text style={styles.divider}>|</Text>
-          <Text style={styles.loginText}>Log in with Password</Text>
+          <Text style={styles.loginText} onPress={navigateToLogin}>
+            Log in with Password
+          </Text>
         </View>
       </View>
     </ScreenWrapper>

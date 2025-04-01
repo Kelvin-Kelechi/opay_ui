@@ -1,17 +1,1 @@
-export const screens = [
-  { name: "status" },
-  { name: "calls" },
-  { name: "camera" },
-  { name: "chats" },
-  { name: "settings" },
-  { name: "edit-profile" },
-  { name: "starred-msg" },
-  { name: "account" },
-  { name: "chats-settings" },
-  { name: "notifications" },
-  { name: "data-storage" },
-  { name: "status-text" },
-  { name: "chat-details" },
-  { name: "contact-info" },
-  { name: "edit-contact" },
-];
+export const screens = [{ name: "login" }];

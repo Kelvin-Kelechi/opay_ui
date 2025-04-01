@@ -1,8 +1,8 @@
 import React from "react";
 import { View } from "react-native";
 import { Stack, useSegments } from "expo-router";
- 
-import TabBar from "@/components/TabBar";
+
+// import TabBar from "@/components/TabBar";
 import { screens } from "@/data";
 
 const _layout = () => {
@@ -27,11 +27,11 @@ const _layout = () => {
   return (
     <View style={{ flex: 1 }}>
       <Stack screenOptions={{ headerShown: false }}>
-        {screens.map(({ name}) => (
+        {screens.map(({ name }) => (
           <Stack.Screen key={name} name={name} />
         ))}
       </Stack>
-      {shouldShowTabBar && <TabBar />}
+      {/* {shouldShowTabBar && <TabBar />} */}
     </View>
   );
 };

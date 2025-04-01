@@ -15,12 +15,12 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children, bg }) => {
       <View
         style={{
           height: top,
-          backgroundColor: "##F6F6F6",
+          backgroundColor: "#fff",
         }}
       >
         <StatusBar
           barStyle="dark-content"
-          backgroundColor="##F6F6F6"
+          backgroundColor="#fff"
           translucent
         />
       </View>

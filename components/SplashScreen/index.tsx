@@ -4,6 +4,7 @@ import { LinearGradient } from "expo-linear-gradient";
 // import TypeWriter from "react-native-typewriter";
 import styles from "./styles";
 
+
 export default function AnimatedSplashScreen() {
   const opacity = new Animated.Value(0);
   const [textVisible, setTextVisible] = useState(false);

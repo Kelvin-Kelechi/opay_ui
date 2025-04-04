@@ -1,1 +1,1 @@
-export const screens = [{ name: "login" }];
+export const screens = [{ name: "login" }, { name: "home" }];

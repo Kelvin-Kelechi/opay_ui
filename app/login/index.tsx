@@ -59,6 +59,11 @@ const LoginScreen: React.FC = () => {
             !isButtonEnabled && styles.disabledButton,
           ]}
           disabled={!isButtonEnabled}
+          onPress={() => {
+            if (isButtonEnabled) {
+              router.push("/home");
+            }
+          }}
         >
           <Text style={styles.loginText}>Log in</Text>
         </TouchableOpacity>

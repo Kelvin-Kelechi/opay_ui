@@ -30,11 +30,20 @@ const HomeScreen = () => {
 
         {/* Balance Section */}
         <View style={styles.balanceContainer}>
-          <Text style={styles.balanceLabel}>Available Balance</Text>
-          <Text style={styles.balanceAmount}>₦14.73</Text>
-          <TouchableOpacity style={styles.addMoneyButton}>
-            <Text style={styles.addMoneyText}>+ Add Money</Text>
-          </TouchableOpacity>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text style={styles.balanceLabel}>Available Balance</Text>
+            <Text style={styles.balanceLabel}>Available Balance</Text>
+          </View>
+          <View
+            style={{ flexDirection: "row", justifyContent: "space-between" }}
+          >
+            <Text style={styles.balanceAmount}>₦14.73</Text>
+            <TouchableOpacity style={styles.addMoneyButton}>
+              <Text style={styles.addMoneyText}>+ Add Money</Text>
+            </TouchableOpacity>
+          </View>
         </View>
 
         {/* Transaction */}
